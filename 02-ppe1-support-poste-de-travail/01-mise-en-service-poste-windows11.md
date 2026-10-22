@@ -50,7 +50,6 @@ Aller sur powershell (terminal de hp)
 
 Taper la commande : `cd $env:USERPROFILE\Downloads` pour verifier que le fichier est bien présent
 
-![image](https://hackmd.io/_uploads/rkgeS8gYfg.png)
 Puis taper " Get-FileHash NOMDUFICHIER.iso -Algorithm SHA256"
 
  ![image](https://hackmd.io/_uploads/rJXXOIxKzg.png)

@@ -4,7 +4,7 @@
 # CDC 2 – POC multi-hyperviseurs : ESXi + Proxmox
 
 **Client :** Léman Transports & Logistique SA
-**Réalisé par :** Rrudhani Deaa (Proxmox) et [nom de ta copine] (ESXi)
+**Réalisé par :** Rrudhani Deaa (Proxmox) et une camarade de classe (ESXi)
 **Date :** 25.09.2026
 
 ---
@@ -15,8 +15,8 @@ Le client hésite entre VMware ESXi et Proxmox VE. Il veut une preuve que les de
 
 | Partie | Responsable |
 |---|---|
-| ESX-LAB01 + VM01-WIN | lilou|
-| PVE-LAB01 + VM02-WIN |Deaa |
+| ESX-LAB01 + VM01-WIN | Coéquipière |
+| PVE-LAB01 + VM02-WIN | Rrudhani Deaa |
 | Tests et analyse | Ensemble |
 
 ---
@@ -372,7 +372,7 @@ Le réseau de la salle n'est pas en 192.168.50.0/24 mais en **10.40.10.0/24**. C
 - **Que faire :** donner une IP fixe à l'ESXi, sur le même réseau que Proxmox.
 - **Comment :** **F2** → root → **Configure Management Network** :
   1. **Network Adapters** : cocher la carte **Connected**.
-  2. **IPv4 Configuration** : **Set static IPv4 address** → IP `10.40.10.11`, masque `255.255.255.0`, passerelle [passerelle].
+  2. **IPv4 Configuration** : **Set static IPv4 address** → IP `10.40.10.11`, masque `255.255.255.0`, passerelle 10.40.10.1.
   3. **DNS Configuration** : DNS `8.8.8.8`, hostname `esx-lab01`.
   4. **Échap → Y** pour appliquer.
   5. **Test Management Network** : ping de la passerelle, du DNS et de **10.40.10.129** (Proxmox).
@@ -460,7 +460,7 @@ Le réseau de la salle n'est pas en 192.168.50.0/24 mais en **10.40.10.0/24**. C
              - 10.40.10.21/24
            routes:
              - to: default
-               via: [passerelle]
+               via: 10.40.10.1
            nameservers:
              addresses:
                - 8.8.8.8
@@ -543,7 +543,7 @@ Le réseau de la salle n'est pas en 192.168.50.0/24 mais en **10.40.10.0/24**. C
   5. Rendre le disque modifiable, puis changer le mot de passe :
 ```bash
      mount -o remount,rw /
-     passwd [nom_utilisateur]
+     passwd <nom_utilisateur>
 ```
   6. Taper deux fois le nouveau mot de passe, puis redémarrer avec `reboot`.
 - **Pourquoi :** le mode recovery démarre Ubuntu avec un accès **root** sans mot de passe. Il est donc possible de changer le mot de passe de n'importe quel utilisateur. Par défaut, le disque est monté en **lecture seule** dans ce mode, d'où la commande `mount -o remount,rw /`. Cette méthode est beaucoup plus rapide qu'une réinstallation, et elle conserve toute la configuration de la VM (Netplan, open-vm-tools).

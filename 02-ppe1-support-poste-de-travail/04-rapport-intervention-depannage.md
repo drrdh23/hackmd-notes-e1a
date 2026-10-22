@@ -7,7 +7,7 @@
 |---|---|
 | Cours | IT Essentials — Mettre en service un poste de travail ICT |
 | Classe | E1A |
-| Technicien | [Ton nom] |
+| Technicien | Rrudhani Deaa |
 | Poste concerné | VM Windows 11 x64 (VMware Workstation) — nom d'hôte : boxbox |
 | Date de l'intervention | 17.09.2026 |
 

@@ -143,7 +143,6 @@ Les objectifs pédagogiques visés sont les suivants :
 ## 2. Matériel utilisé
 
 - PC portable HP Envy x360
-- [À compléter — tournevis si tentative d'ouverture, sinon aucun matériel physique nécessaire]
 
 ## 3. Procédure de sécurité respectée
 
@@ -157,8 +156,7 @@ Sur HP Envy x360, l'accès au BIOS ne se fait pas par une touche unique au déma
 
 1. Ordinateur doit être éteint, appuyer sur le bouton d'alimentation puis appuyer de manière répétée sur la touche "Échap" jusqu'à l'apparition du menu de démarrage (Startup Menu).
 2. Depuis ce menu, appuyer sur **F10** pour ouvrir l'utilitaire de configuration du BIOS.
-3. ![image](https://hackmd.io/_uploads/ryw-wSetGl.png)
-
+3. 
 
 
 ### 4.2 Définition d'un mot de passe superviseur
@@ -255,7 +253,6 @@ Objectifs pédagogiques :
 ## 3. Téléchargement et vérification des ISO
 1. Aller sur powershell (terminal de hp) 
 2. Taper la commande : `cd $env:USERPROFILE\Downloads` pour verifier que le fichier est bien présent 
-![image](https://hackmd.io/_uploads/rkgeS8gYfg.png)
 
 3. Puis taper " Get-FileHash NOMDUFICHIER.iso -Algorithm SHA256" 
 ![Capture d'écran 2026-09-10 180700](https://hackmd.io/_uploads/rkQLL8gtzl.png)

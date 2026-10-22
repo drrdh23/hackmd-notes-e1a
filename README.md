@@ -1,10 +1,9 @@
-# Notes de cours HackMD — formation E1A
+# TP et notes de cours — réseaux, systèmes et virtualisation
 
-Archive **privée** de mes notes HackMD (Geneva Institute of Technology, classe E1A), rangées par module.
+Mes travaux pratiques et notes de cours de la formation **E1A** au **Geneva Institute of Technology**, rédigés au fil des modules sur HackMD puis rangés ici par thème.
 Les projets les plus aboutis ont leur propre dépôt documenté : voir [Projets documentés](#projets-documentés).
 
-> Les mots de passe présents dans certaines notes ont été remplacés par `<REDACTED>` ou `<MOT_DE_PASSE>`.
-> Les captures d'écran restent hébergées sur HackMD (liens `hackmd.io/_uploads`).
+> Les mots de passe de labo sont masqués (`<REDACTED>`, `<MOT_DE_PASSE>`). Les entreprises clientes citées sont des cas d'étude fournis par l'école. Les captures d'écran sont hébergées sur HackMD.
 
 ## 01 — Module 1 : matériel et bases
 | Note | Contenu |

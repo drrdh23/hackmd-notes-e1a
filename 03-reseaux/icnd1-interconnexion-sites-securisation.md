@@ -1,16 +1,10 @@
 # TP ICND1 – Interconnexion des sites et sécurisation des accès
 
-## À faire avant de rendre (à supprimer ensuite)
-
-Ce rapport décrit uniquement ce qui a réellement été fait sur ta maquette. Les points ci-dessous manquent encore ou sont à vérifier dans ton cahier des charges : coche-les, fais les captures, puis supprime cette section.
-
-
-
 ## Informations
 
 | | |
 | --- | --- |
-| Étudiante | Rrudhani Dea |
+| Étudiante | Rrudhani Deaa |
 | Formation | CFC Informaticien – Geneva Institute of Technology |
 | Client | Léman Logistique SA – Ticket SAT-2026-0412 |
 | Prestataire | Satom IT & Learning Solutions |
@@ -276,8 +270,8 @@ Sur Windows, le client Telnet a été activé avec dism /online /Enable-Feature 
 | Depuis | Vers | SSH | Telnet |
 | --- | --- | --- | --- |
 | PC-NYO (Ubuntu) | R1-GNV, R2-LSN, R3-NYO | ✅ | ✅ |
-| PC-LSN (Windows) | R2-LSN | ✅ | [à compléter] |
-| PC-LSN (Windows) | R1-GNV, R3-NYO | [à compléter] | [à compléter] |
+| PC-LSN (Windows) | R2-LSN | ✅ | non testé |
+| PC-LSN (Windows) | R1-GNV, R3-NYO | non testé | non testé |
 
 ![image](https://hackmd.io/_uploads/SkjlfEa5fe.png)
 
@@ -306,7 +300,19 @@ Capture sur le lien WAN-1 (R1-GNV Gi1/0 ↔ R2-LSN Gi0/0), clic droit sur le lie
 
 ![image](https://hackmd.io/_uploads/Hy9BI4p5Mg.png)
 
-![image](https://hackmd.io/_uploads/HkMN_E69Gg.png)
+*Extrait du flux TCP Telnet suivi dans Wireshark (mot de passe masqué pour la publication) :*
+
+```text
+User Access Verification
+
+Username: admin
+Password: ********        <- lisible en clair dans la capture
+
+R2-LSN#show users
+    Line       User       Host(s)              Idle       Location
+   0 con 0                idle                 00:27:26
+*  2 vty 0     admin      idle                 00:00:00 192.168.10.10
+```
 
 ![image](https://hackmd.io/_uploads/HyRmtV6cGe.png)
 ![image](https://hackmd.io/_uploads/rJHHF4a9zx.png)
